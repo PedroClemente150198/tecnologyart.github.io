@@ -1,0 +1,170 @@
+body{
+    /* background: black; */
+}
+.cont-main-nosotros{
+    transform: translateY(8rem);
+}
+
+.cont-mision-vision{
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-main-nosotros section h1{
+    margin-bottom: 2rem;
+    /* color: white; */
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cont-mi-vi-text{
+    /* border: solid; */
+    width: 90%;
+    display: flex;
+    font-size: 1.8rem;
+}
+
+.cont-mi-vi-text div{
+    /* border: solid; */
+    /* border-left: solid; */
+    padding: 6rem;
+    text-align: justify;
+}
+
+.cont-mi-vi-text div h2{
+    text-align: center;
+}
+
+.cont-mi-vi-text div:first-child{
+    border-right: solid 0.15rem;
+}
+
+.cont-mi-vi-text div:last-child{
+    border-left: solid 0.15rem;
+}
+
+/* 
+=======================================================================
+                   Estilo para las Imagenes y Reflejos
+=======================================================================
+*/
+
+.image-container {
+    /* border: solid; */
+    margin-bottom: 10rem;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    align-self: center;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 5rem;
+    /* background-color: #000000; */
+}
+
+.imagen-original {
+    width: 47%;
+    height: 40rem;
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
+.reflejo {
+    width: 47%;
+    height: 40rem;
+    display: block;
+    transform: scaleX(-1); /* Invertir la imagen verticalmente */
+    opacity: 0.8; /* Transparencia para simular reflejo */
+    filter: blur(2px); /* Difuminar ligeramente para un efecto realista */
+    position: relative;
+    /* top: -5px; Ajuste para que esté justo debajo de la imagen original */
+}
+
+/* Puedes agregar un gradiente para hacer que el reflejo se desvanezca gradualmente */
+.image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%; /* Altura del gradiente */
+    background: linear-gradient(to bottom, #02020200, #ffffff);
+    pointer-events: none;
+}
+
+/* 
+=======================================================================
+                Estilo Conoce Nuestro Equipo de Trabajo
+=======================================================================
+*/
+.cont-equip0-trabajo{
+    text-align: center;
+    padding: 3rem;
+    font-size: 2.4rem;
+}
+
+.cont-equip0-trabajo h3{
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cont-equiHijo-Trabajo {
+    /* border: solid; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: repeat(1, 20rem); /* Tres filas con 150px de alto */
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.flip-card {
+    /* border: solid; */
+    background-color: transparent;
+    width: 100%;
+    height: 22rem;
+    perspective: 100rem; /* Añade profundidad 3D para el efecto de volteo */
+}
+
+.flip-card-inner {
+    /* border: solid; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Preserva el 3D para que ambas caras sean visibles */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Rota la tarjeta 180 grados en el eje Y */
+    cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
+    backface-visibility: hidden;
+    font-size: 1.3rem;
+}
+
+.flip-card-front {
+    background-color: lightblue;
+    color: black;
+}
+
+.flip-card-back {
+    border-radius: 1.5rem;
+    background-color: rgb(7, 7, 7);
+    padding: 1.2rem;
+    text-align: justify;
+    color: white;
+    transform: rotateY(180deg); /* Hace que el lado trasero esté al revés por defecto */
+}
