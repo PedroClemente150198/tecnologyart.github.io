@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="shortcut icon" href="src/LogoSimplificado.png" type="image/x-icon">
-    <title>POLIRAICES</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/propiedades.css">
@@ -15,9 +15,10 @@
     <header>
         <nav class="conte-nav">
             <div class="cont-logo"><img src="src/logo_png-8.png" alt=""></div>
-            <ul class="cont-menu">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="cont-menu" id="menu">
                 <li class="intems"><a href="index.html">Inicio</a></li>
-                <li class="intems"><a href="">Nosotros</a></li>
+                <li class="intems"><a href="nosotros.html">Nosotros</a></li>
                 <li class="intems"><a href="propiedades.html">Propiedades</a></li>
                 <li class="intems"><a href="">Proyectos</a></li>
                 <li class="intems"><a href="">Servicios</a></li>
@@ -204,7 +205,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-contact">
-                <img src="src/PNG/Logo_FondoNegro.png" alt="Propiedades Lozada Logo" class="footer-logo">
+                <img src="src/png/Logo_FondoNegro.png" alt="Propiedades Lozada Logo" class="footer-logo">
                 <p>Propiedades a la venta Salinas-Santa Elena-Costa del Ecuador</p>
                 <p><strong>Encuéntranos en</strong></p>
                 <p><a href="tel:+593967383333">+593 96 738 3333</a></p>
@@ -245,5 +246,11 @@
     </footer>
     
     <script src="js/propiedades.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
