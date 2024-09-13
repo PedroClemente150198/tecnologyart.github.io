@@ -11,10 +11,11 @@
 <body>
     <header>
         <nav class="conte-nav">
-            <div class="cont-logo"><img src="src/logo_png@2x.png" alt=""></div>
-            <ul class="cont-menu">
+            <div class="cont-logo"><img src="src/logo_png-8.png" alt=""></div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="cont-menu" id="menu">
                 <li class="intems"><a href="index.html">Inicio</a></li>
-                <li class="intems"><a href="">Nosotros</a></li>
+                <li class="intems"><a href="nosotros.html">Nosotros</a></li>
                 <li class="intems"><a href="propiedades.html">Propiedades</a></li>
                 <li class="intems"><a href="">Proyectos</a></li>
                 <li class="intems"><a href="">Servicios</a></li>
@@ -23,7 +24,7 @@
             <!-- <h3>0978702302</h3> -->
         </nav>
     </header>
-    <main>
+    <main class="cont-main">
         <section class="search-container">
             <div class="search-boxPadre">
                 <h1>Encuentra tu hogar</h1>
@@ -191,7 +192,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-contact">
-                <img src="src/PNG/Logo_FondoNegro.png" alt="Propiedades Lozada Logo" class="footer-logo">
+                <img src="src/png/Logo_FondoNegro.png" alt="Propiedades Lozada Logo" class="footer-logo">
                 <p>Propiedades a la venta Salinas-Santa Elena-Costa del Ecuador</p>
                 <p><strong>Encuéntranos en</strong></p>
                 <p><a href="tel:+593967383333">+593 96 738 3333</a></p>
@@ -283,6 +284,13 @@
             }
         });
 
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
     </script>
     
     
