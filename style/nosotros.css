@@ -2,6 +2,7 @@ body{
     /* background: black; */
 }
 .cont-main-nosotros{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform: translateY(8rem);
 }
 
@@ -13,11 +14,9 @@ body{
     justify-content: center;
 }
 
-.cont-main-nosotros section h1{
-    margin-bottom: 2rem;
-    /* color: white; */
-    font-size: 3rem;
-    text-align: center;
+.cont-main-nosotros .cont-mision-vision img{
+    width: 17rem;
+    transform: translateX(-20%);
 }
 
 .cont-mi-vi-text{
@@ -127,7 +126,7 @@ body{
     /* border: solid; */
     background-color: transparent;
     width: 100%;
-    height: 22rem;
+    height: 24rem;
     perspective: 100rem; /* Añade profundidad 3D para el efecto de volteo */
 }
 
@@ -152,14 +151,14 @@ body{
     height: 100%;
     -webkit-backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
     backface-visibility: hidden;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 .flip-card-front {
-    background-color: lightblue;
+    background-color: #ffffff00;
     color: black;
+    animation: flashBackground 3s infinite ease-in-out; /* Animación continua */
 }
-
 .flip-card-back {
     border-radius: 1.5rem;
     background-color: rgb(7, 7, 7);
@@ -167,4 +166,69 @@ body{
     text-align: justify;
     color: white;
     transform: rotateY(180deg); /* Hace que el lado trasero esté al revés por defecto */
+}
+
+/* =============================================== */
+
+.gallery-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+   .cont-mi-vi-text{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .cont-equiHijo-Trabajo{
+    display: flex;
+    flex-direction: column;
+   }
+}
+ 
+
+@keyframes flashBackground {
+    0% {
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0); /* Sin sombra */
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.238), 0 0 10px rgba(255, 42, 0, 0.231); /* Sombra dorada brillante */
+    }
+    100% {
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0); /* Sin sombra */
+    }
 }

@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+.main-cont-proyect{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* transform: translateY(6.3rem); */
+    /* margin: 6.3rem 0; */
+    color: white;
+    width: 100%;
+    
+}
+.seccion-primerparte{
+    background-color: #2c2b2b;
+}
+
+.seccion-proyect {
+    padding-top: 6.5rem;
+    /* border: solid; */
+    display: grid;
+    grid-template-columns: 65% 35%; /* Primera columna ocupa el 70%, segunda el 30% */
+    grid-template-rows: auto auto; /* 2 filas: una para las columnas y una para la imagen */
+    /* gap: 10px; Espacio entre las columnas */
+}
+
+.columna1, .columna2 {
+    /* background-color: lightblue;  */
+    height: 14rem; /* Altura para las primeras dos columnas */
+}
+
+
+.columna1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2; /* Primera columna (70% del ancho) */
+    border-right: solid;
+}
+
+.columna1 h2{
+    font-size: 2.7rem;
+    text-align: center;
+    color: #efefef;
+    text-shadow: 0 3px 10px rgba(255, 255, 255, 0.533);
+}
+
+.columna2 {
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: justify;
+    grid-column: 2 / 3; /* Segunda columna (30% del ancho) */
+}
+
+.columna2 p{
+    padding: 0.5rem 3.5rem;
+    font-size: 1.4rem;
+}
+
+.columna-imagen {
+    grid-column: 1 / 3; /* Ocupa las dos columnas completas */
+}
+
+.columna-imagen img {
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.seccion-Comunidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: black;
+}
+
+.seccion-Comunidad h3{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    padding-top: 1.8rem;
+}
+
+.seccion-Comunidad .comunidad{
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.cont-comuni{
+    margin: 0 1rem;
+    padding: 3rem 1rem;
+    width: 20rem;
+    height: 23rem;
+    /* border: 2px groove rgb(247, 247, 247); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.cont-comuni i{
+    width: 100%;
+    /* height: 100%; */
+    font-size: 60px;
+    color: white;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-comuni p{
+    /* border: solid; */
+    font-size: 1.9rem;
+}
+
+.cont-comuni .numero{
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.seccion-ciudades{
+    background-color: #3b3b3b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+
+}
+
+.seccion-ciudades div{
+    display: flex;
+}
+
+.seccion-ciudades h5{
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.ciudades{
+    width: 70%;
+    /* border: solid; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.titile-ciudaddes{
+    font-size: 2.4rem;
+    color: #c6c6c6;
+    font-weight: bold;
+}
+
+.seccion-ciudades .conte-ciudades{
+    /* border: solid; */
+    width: 28rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+.seccion-ciudades .conte-ciudades .img-santaelena{
+    width: 100%;
+    height: 100%;
+}
+
+.seccion-ciudades .conte-ciudades p{
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 0.7rem;
+}
+
+.titlte{
+    width: 100%;
+    padding: 0.3rem 1rem;
+    background-color: #b3b2b2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+}
+
+.seccion-ciudades .conte-ciudades button{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-right: 1.5rem;
+    border: none;
+}
+
+.seccion-ciudades .conte-ciudades button {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-right: 1.5rem;
+    border: none;
+    cursor: inherit; /* El cursor no cambiará en el botón completo */
+}
+
+.seccion-ciudades .conte-ciudades button span {
+    cursor: pointer; /* Solo el texto dentro del span tendrá cursor pointer */
+    
+}
+
+.seccion-ciudades .conte-ciudades button span:hover{
+    color: #3b3b3b;
+    font-weight: bold;
+}
+
+/*
+=======================================================================================
+                    Diseños para Grid de Galerias
+=======================================================================================
+*/
+.card-targe-galeria{
+    /* border: solid black; */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr); /* 6 filas iguales */
+    /* grid-gap: 10px; */
+}
+
+
+.card-targe-galeria .card-present{
+    /* border: solid white; */
+    width: 100%;
+    height: 35rem;
+}
+
+.card-targe-galeria .card-present img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-cont-proyect .seccion-primerparte{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-cont-proyect .seccion-primerparte .columna1, .columna2{
+        padding: 1rem 2rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-cont-proyect .seccion-primerparte .columna2{
+        /* padding: 3rem 0; */
+        /* font-size: 1.6rem; */
+        width: 100%;
+        height: 100%;
+    }
+    .main-cont-proyect .seccion-primerparte .columna2 p{
+        font-size: 1.6rem;
+        padding: 0;
+    }
+
+    .seccion-Comunidad .comunidad{
+        display: flex;
+        flex-direction: column;
+    }
+    .seccion-Comunidad h3{
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .seccion-ciudades h5{
+        width: 90%;
+        text-align: center;
+    }
+    .seccion-ciudades .ciudades{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ciudades{
+        width: 100%;
+    }
+    .seccion-ciudades .ciudades .conte-ciudades{
+        width: 90%;
+        height: 100%;
+    }
+
+    .seccion-ciudades .ciudades .conte-ciudades p{
+        font-size: 1.6rem;
+    }
+
+    .card-targe-galeria{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 769px) {
+
+}

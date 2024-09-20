@@ -99,6 +99,11 @@ main {
     color: #333;
 }
 
+.property-info p:nth-child(3) {
+    font-weight: bold; /* Aplica negrita solo al segundo párrafo */
+}
+
+
 .actions {
     display: flex;
     gap: 10px;
@@ -120,4 +125,32 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    main{
+        /* padding: 0; */
+    }
+    .property-container{
+        width: 100%;
+    }
+    .property{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .carousel-container{
+        width: 100%;
+    }
+    .property-info{
+        width: 100%;
+    }
+
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 769px) {
+    
 }

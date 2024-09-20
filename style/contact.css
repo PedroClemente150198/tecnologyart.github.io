@@ -115,7 +115,7 @@ textarea{
     padding: 10px;
 }
 
-button {
+#enviar {
     padding: 15px;
     border: none;
     background-color: #c93335;
@@ -125,7 +125,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#enviar:hover {
     background-color: #a7292b;
 }
 
@@ -133,6 +133,7 @@ button:hover {
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
+        width: 100%;
     }
 
     .image-container, .form-container {
